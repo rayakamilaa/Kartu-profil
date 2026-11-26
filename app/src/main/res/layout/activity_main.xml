@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Overall Background Image sent by user -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_spiderman"
+        android:contentDescription="Background Spiderman" />
+
+    <!-- Dark Overlay for better contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#26000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Form Container Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form_card"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="22dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFoto"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/desc_foto"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_profile"
+                    app:shapeAppearanceOverlay="@style/CircleImageStyle"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="3dp" />
+
+                <TextView
+                    android:id="@+id/tvJudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/judul_profil"
+                    android:textColor="@color/primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSubjudul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/subjudul_profil"
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp" />
+
+                <!-- Label & Input Nama -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="Nama Lengkap"
+                    android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etNama"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="@string/hint_nama"
+                    android:inputType="textPersonName"
+                    android:paddingHorizontal="14dp"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp" />
+
+                <!-- Label & Input Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Alamat Email"
+                    android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="14dp"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp" />
+
+                <!-- Label & Input Tahun Lahir -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Tahun Lahir"
+                    android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etTahunLahir"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_input_field"
+                    android:hint="Contoh: 2004"
+                    android:inputType="number"
+                    android:paddingHorizontal="14dp"
+                    android:textColor="@color/text_dark"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="15sp" />
+
+                <!-- Baris Tombol 1: Batal & Simpan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnBatal"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/tombol_batal"
+                        android:textColor="#374151"
+                        app:backgroundTint="#E5E7EB" />
+
+                    <Button
+                        android:id="@+id/btnSimpan"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="@string/tombol_simpan"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/primary" />
+                </LinearLayout>
+
+                <!-- Baris Tombol 2: Hapus & Lihat Pengguna -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnHapusSimpan"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:text="Hapus Data"
+                        android:textColor="#B71C1C"
+                        app:backgroundTint="#FFEBEE" />
+
+                    <Button
+                        android:id="@+id/btnLihatPengguna"
+                        android:layout_width="0dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:text="Lihat Pengguna"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="@color/accent_blue" />
+                </LinearLayout>
+
+                <!-- Teks Status -->
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_dark"
+                    android:textSize="14sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

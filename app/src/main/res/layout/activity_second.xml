@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Overall Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Background Spiderman"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_spiderman" />
+
+    <!-- Dark Overlay for better contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#26000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Card Informasi Transparan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_form_card"
+                android:elevation="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Profile Image Lingkaran -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivFotoDiterima"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/desc_foto"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_profile"
+                    app:shapeAppearanceOverlay="@style/CircleImageStyle"
+                    app:strokeColor="@color/primary"
+                    app:strokeWidth="3dp" />
+
+                <!-- Judul -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="@string/judul_tentang"
+                    android:textColor="@color/primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <!-- Subjudul / Deskripsi -->
+                <TextView
+                    android:id="@+id/tvDeskripsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="@string/deskripsi_profil"
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp" />
+
+                <!-- Separator Line -->
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="2.5dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/primary" />
+
+                <!-- Nama Diterima -->
+                <TextView
+                    android:id="@+id/tvNamaDiterima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/text_dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Email Diterima -->
+                <TextView
+                    android:id="@+id/tvEmailDiterima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_muted"
+                    android:textSize="15sp" />
+
+                <!-- Umur & Kategori Badge -->
+                <TextView
+                    android:id="@+id/tvUmurKategoriDiterima"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_input_field"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="8dp"
+                    android:textColor="@color/primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <!-- Tombol Kembali -->
+                <Button
+                    android:id="@+id/btnKembali"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/tombol_kembali"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/primary" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

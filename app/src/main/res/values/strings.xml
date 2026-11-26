@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Gabungan Pertemuan 5 + tambahan Pertemuan 6.
+     Tambahkan ke strings.xml proyek kalian (jangan menduplikasi
+     app_name atau nama lain yang sudah ada). -->
+<resources>
+    <string name="app_name">Kartu Profil</string>
+    <string name="judul_profil">Profil Saya</string>
+    <string name="subjudul_profil">Mahasiswa Informatika</string>
+    <string name="deskripsi_profil">Suka belajar pemrograman mobile dan menjelajahi hal baru.</string>
+    <string name="hint_nama">Nama lengkap</string>
+    <string name="hint_email">Alamat email</string>
+    <string name="tombol_simpan">Simpan</string>
+    <string name="tombol_batal">Batal</string>
+    <string name="desc_foto">Foto profil</string>
+    <!-- TAMBAHAN Pertemuan 6 -->
+    <string name="judul_tentang">Tentang Saya</string>
+    <string name="tombol_kembali">Kembali</string>
+</resources>
